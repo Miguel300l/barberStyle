@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Horizontal from "../../assets/img/logo_barber.webp";
 import Favicon2 from "../../assets/img/logo_barber.webp";
 import "../../assets/css/navbar.css";
@@ -10,11 +10,12 @@ import DatosAjustes from '../modales/Ajustes'
 import NotificacionAseptar from '../modales/AceptarRechazarCharla'
 import RegistroAprendiz from '../modales/RegistroAprendiz'
 import RegistroProfesional from '../modales/RegistroProfesional'
-
+import WhatsappFloat from "../componentes/WhatsappFloat";
 
 const Navbar = () => {
+
   const [isScrolled, setIsScrolled] = useState(false);
-  const collapseRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,32 +25,41 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+
   }, []);
 
   const closeMenu = () => {
     const menu = document.getElementById('navbarSupportedContent');
-
     if (menu) {
       menu.classList.remove('show');
     }
+    setMenuOpen(false);
   };
 
-  const handleLinkClick = () => closeMenu();
-  const handleCloseMenu = () => closeMenu();
+  const handleLinkClick = () => {
+    closeMenu();
+  };
+
   return (
     <>
-      <nav
-        className={`navbar navbar-expand-lg navbar-dark fixed-top ${isScrolled ? 'bg-custom' : 'bg-transparent'}`}
-        id="menu"
+      {/* OVERLAY BLUR */}
+      {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
 
+      <nav
+        className={`navbar navbar-expand-lg navbar-dark fixed-top ${isScrolled ? 'bg-custom' : 'bg-transparent'} ${menuOpen ? 'no-background' : ''}`}
+        id="menu"
       >
+
         <div className="container-fluid" id="img-slider">
-          <Link className="navbar-brand" to="/">
+
+          {/* Logo, se oculta cuando menuOpen es true */}
+          <Link className={`navbar-brand logo-container ${menuOpen ? 'hidden' : ''}`} to="/">
             <img src={Horizontal} alt="Logo" className="img-logo" />
             <img
               src={Favicon2}
@@ -57,60 +67,71 @@ const Navbar = () => {
               className="img-logo-mini d-none me-auto"
             />
           </Link>
+
           <button
-            className="navbar-toggler"
+            className={`navbar-toggler ${menuOpen ? 'd-none' : ''}`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded={menuOpen}
             aria-label="Toggle navigation"
+            onClick={() => setMenuOpen(true)}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
+          <button
+            className={`btn-close-menu ${menuOpen ? '' : 'd-none'}`}
+            onClick={closeMenu}
+          >
+            &times;
+          </button>
+
           <div
-            className="collapse navbar-collapse opciones-navbar"
+            className={`collapse navbar-collapse opciones-navbar ${menuOpen ? 'show' : 'hidden-menu'}`}
             id="navbarSupportedContent"
           >
-            {/* BOTÓN X */}
-            <button
-              className="btn-close-menu"
-              onClick={handleCloseMenu}
-            >
-              &times;
-            </button>
+
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item fs-6 ">
-                <Link className="nav-link custom-link" aria-current="page" to="/" onClick={handleLinkClick}>
+
+              <li className="nav-item fs-6">
+                <Link className="nav-link custom-link" to="/" onClick={handleLinkClick}>
                   INICIO
                 </Link>
               </li>
-              <li className="nav-item  fs-6">
+
+              <li className="nav-item fs-6">
                 <Link className="nav-link custom-link" to="/nosotros" onClick={handleLinkClick}>
                   NOSOTROS
                 </Link>
               </li>
-              <li className="nav-item  fs-6">
+
+              <li className="nav-item fs-6">
                 <Link className="nav-link custom-link" to="/servicios" onClick={handleLinkClick}>
                   SERVICIOS
                 </Link>
               </li>
-              <li className="nav-item  fs-6">
+
+              <li className="nav-item fs-6">
                 <Link className="nav-link custom-link" to="/galeria" onClick={handleLinkClick}>
                   GALERIA
                 </Link>
               </li>
-              <li className="nav-item  fs-6">
+
+              <li className="nav-item fs-6">
                 <Link className="nav-link custom-link" to="/precios" onClick={handleLinkClick}>
                   PRECIOS
                 </Link>
               </li>
-              <li className="nav-item  fs-6">
+
+              <li className="nav-item fs-6">
                 <Link className="nav-link custom-link" to="/tutoriales" onClick={handleLinkClick}>
                   TUTORIALES
                 </Link>
               </li>
-              <li className="nav-item  fs-6">
+
+              <li className="nav-item fs-6">
                 <Link className="nav-link custom-link" to="/productos" onClick={handleLinkClick}>
                   PRODUCTOS
                 </Link>
@@ -118,19 +139,18 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </nav >
-
+      </nav>
 
       {/* Modales */}
-      < InicioSesion />
+      <InicioSesion />
       <DatosAjustes />
       <NotificacionAseptar />
       <RegistroAprendiz />
       <RegistroProfesional />
 
       <Outlet />
+      {!menuOpen && <WhatsappFloat />}
       <Footer />
-
     </>
   );
 };
