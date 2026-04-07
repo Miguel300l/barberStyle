@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards .card .content .img {
+    height: 130px;
+    width: 130px;
+    margin-bottom: 14px;
+    background: #00324d;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.cards .card .content .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.container {
+    max-width: 950px;
+    overflow: hidden;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.container .main-card {
+    width: 250%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 1s ease;
+}
+
+#two:checked~.main-card {
+    margin-left: -100%;
+}
+
+.main-card .cards {
+    width: calc(100% / 1 - 8px);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.main-card .cards .card {
+    background: #fff;
+    width: calc(120% / 3 - 10px);
+    padding: 30px;
+    border-radius: 24px;
+    transition: all 0.4s ease;
+}
+
+.main-card .cards .card:hover {
+    transform: translateY(-15px);
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Color  */
+body::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: inset(47% 0 0 0);
+    z-index: -1;
+}
+
+.card .content .details .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card .content .details .name .jod {
+    font-size: 20px;
+    color: #000000;
+}
+
+.cards .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+.button label {
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    margin: 0 4px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.button label.active {
+    width: 35px;
+}
+
+#one:checked~.button label.one {
+    width: 35px;
+}
+
+#two:checked~.button label.two {
+    width: 35px;
+}
+
+#two:checked~.button label.one {
+    width: 15px;
+}
+
+#one:checked~.button label.two {
+    width: 15px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@media (max-width: 100px) {
+    .main-card .cards .card {
+        width: calc(100% / 2 - 10px);
+        margin: 20px 0 10px 0;
+    }
+}
+
+@media (max-width: 100px) {
+    .main-card .cards .card {
+        width: calc(100% / 2 - 10px);
+        margin: 100px;
+    }
+}
+
+/* Animación para mover la imagen continuamente */
+@keyframes moveImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.image-hover {
+    animation: moveImage 3s ease-in-out infinite;
+}
+
+.card-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    overflow: hidden;
+    position: relative;
+    margin-top: -60px;
+}
+
+.carousel-content {
+    display: flex;
+    animation: slide 30s linear infinite;
+}
+
+.image-set {
+    display: flex;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+  

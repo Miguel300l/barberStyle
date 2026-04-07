@@ -1,0 +1,88 @@
+.contenedor_formulario {
+  width: 350px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#formularioP {
+  width: 360px;
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.color-charla {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 50%;
+}
+
+.img_charla {
+  background-color: black;
+  background-position: center center;
+  background-size: cover;
+  flex: 0 0 calc(70%);
+  margin: 0 auto;
+  height: 100%;
+  width: 400px;
+}
+
+
+@media (max-width:1000px) {
+  .img_charla {
+    display: none;
+  }
+}
+
+.solicita {
+  color: white;
+  font-family: Georgia, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.formulario {
+  flex: 0 0 calc(70%);
+  padding: 30px;
+  background-color: #000000;
+}
+
+
+
+
+
+.hero-servicios {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-servicios-zoom {
+  object-fit: cover;
+  animation: zoomServicios 8s ease-in-out infinite alternate;
+}
+
+.overlay-dark {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.titulo-servicios {
+  font-family: Lato, sans-serif;
+  font-size: clamp(24px, 5vw, 50px);
+  z-index: 2;
+}
+
+@keyframes zoomServicios {
+
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+
+}

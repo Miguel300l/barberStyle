@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+.modal-content {
+  font-family: "Roboto", sans-serif;
+}
+
+.form__container {
+  margin-top: 5em;
+  display: grid;
+}
+
+.form__group {
+  position: relative;
+  --color: #5757577e;
+  text-align: left;
+}
+
+.form__input {
+  margin-bottom: 25px;
+  width: 100%;
+  background: none;
+  color: #706c6c;
+  font-size: 16px;
+  padding: 0.4em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+  font-family: "Roboto", sans-serif;
+  transition: 0.5s;
+  text-align: left;
+}
+
+.form-control {
+  transition: border-color 0.3s;
+  cursor: pointer;
+}
+
+.form-control:hover {
+  border-color: black; 
+}
+
+/**/
+/*  */
+.form__label {
+  position: absolute;
+  color: var(--color);
+  pointer-events: none;
+  top: 50%;
+  left: 75px;
+  align-items: end;
+  width: 100px;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transform: translateY(-22px);
+  color: rgb(81, 80, 77);
+  transition: 0.5s;
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+  top: 4px;
+  font-size: 15px;
+  color: #333;
+}
+
+.form__input:focus,
+.form__input:not(:placeholder-shown) {
+  border-bottom: 1px solid #000000;
+}
+
+.icon_login {
+  position: absolute;
+  right: 70px;
+  font-size: 3em;
+  color: #219015;
+  line-height: 45px;
+}
+
+.clear {
+  clear: both;
+}
+
+.form_paragraph {
+  transform: translateY(-25px);
+}
+
+.button {
+  transform: translateY(-25px);
+}

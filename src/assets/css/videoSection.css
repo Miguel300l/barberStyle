@@ -1,0 +1,87 @@
+.video-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.nosotros p {
+    line-height: 1.6;
+}
+
+.nosotros .fs-1 {
+    font-size: 50px !important;
+}
+
+.video-section .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.video-section .content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+
+.services-section {
+    background: #f8f9fa;
+  }
+
+  .service-img {
+    width: 22rem;
+    height: auto;
+    margin-left: 140px;
+  }
+  
+  @media (max-width: 1200px) {
+    .service-img {
+      width: 18rem;
+      margin-left: 80px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .service-img {
+      width: 16rem;
+      margin: 0 auto 1rem auto;
+      display: block;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-img {
+      width: 100%;
+      margin: 0 auto 1rem auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .service-row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .service-content {
+      text-align: center;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .service-icon {
+      margin: 0 auto 0.5rem;
+    }
+  }
+  
+  .service-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .service-title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .service-desc {
+    color: #444;
+    line-height: 1.6;
+  }
