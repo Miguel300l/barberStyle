@@ -69,7 +69,7 @@ const ListaPrecios = () => {
 
                 <div
                     className="position-absolute top-0 start-0 w-100 h-100"
-                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
                 ></div>
 
                 <div className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center px-3">
