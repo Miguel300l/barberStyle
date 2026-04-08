@@ -6,7 +6,7 @@ import HorariosAtencion from '../componentes/HorariosAtencion'
 import ServiciosPrecios from '../componentes/ServiciosPrecios'
 import music from "../../assets/img/videos/musica_fondo.mp3"
 
-const precios = "/carrusel_precios.webp";
+const precios = "/carrusel_precios.jpeg";
 
 const Contenido = () => {
   const audioRef = useRef(null);
