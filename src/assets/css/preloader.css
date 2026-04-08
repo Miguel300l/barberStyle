@@ -1,0 +1,34 @@
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-logo {
+    width: 120px;
+    animation: logoZoomFade 1.8s ease forwards;
+}
+
+@keyframes logoZoomFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 0.6;
+        transform: scale(1.6);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2.2);
+    }
+}

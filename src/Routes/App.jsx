@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 //Landing Aprendiz
 import Navbar from "../landing/componentes/Navbar";
@@ -26,12 +27,28 @@ import Adminsolicitudes from '../administrador/pages/ListaUsuarios'
 import Adminusuarios from '../administrador/pages/Pqrs'
 import Admincronograma from '../administrador/pages/ListaCronograma'
 import Adminprofesional from '../administrador/pages/SolicitudesProfesional'
+import Preloader from "../landing/componentes/Preloader";
 import { ProtectRoutesAdmin, ProtectRoutesProfesional } from './ProtectRoutes'
 
+import '../../src/assets/css/preloader.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap/dist/js/bootstrap.min.js"
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Preloader />;
+  }
+
   return (
     <main>
       <div>
