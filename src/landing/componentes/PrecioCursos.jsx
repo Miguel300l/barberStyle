@@ -1,6 +1,5 @@
 import React from 'react';
 import estiloCorte from '../../assets/img/estiloCorte.svg';
-import '../../assets/css/circuloEstadistica.css'
 
 const services = [
   {

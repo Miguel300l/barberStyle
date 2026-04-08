@@ -2,7 +2,6 @@ import React from 'react';
 import tijera from '../../assets/img/tijera.svg';
 import maquina from '../../assets/img/maquina.svg';
 import cuchilla from '../../assets/img/cuchilla.svg';
-import '../../assets/css/circuloEstadistica.css'
 
 const services = [
     {
