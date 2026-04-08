@@ -17,11 +17,12 @@ const VideoSection = () => {
         <div className="col-md-6 mb-4 mb-md-0">
           <div className="ratio ratio-16x9">
             <iframe
-              src="https://www.youtube.com/embed/lqY_htQjCl4"
+              src="https://www.youtube.com/embed/GjHMUKz-iUc"
               title="Promo Video"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            />
+            ></iframe>
           </div>
         </div>
         {/* Text Column */}

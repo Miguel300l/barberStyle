@@ -1,6 +1,6 @@
 import React from 'react';
 import salonBarberia1 from '../../assets/img/salonBarberia1.jpeg';
-import barbero3D from '../../assets/img/barbero3D.png';
+import barbero3D from '../../assets/img/barbero3D.webp';
 import separador from '../../assets/img/separador.svg';
 
 const BarberoServicio = () => {
