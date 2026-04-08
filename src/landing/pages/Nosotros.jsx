@@ -4,7 +4,7 @@ import CarouselInfinito from '../../landing/componentes/CarouselInfinito'
 import separador from '../../assets/img/separador.svg';
 import barbero from '../../assets/img/barbero.webp';
 import barbero2 from '../../assets/img/mago2.webp';
-import circuloEstadistica from '../../assets/img/circuloEstadistica.jpg'
+import circuloEstadistica from '../../assets/img/circuloEstadistica.jpeg'
 import HistoriaBarberia from '../componentes/HistoriaBarberia'
 import CircleStat from '../componentes/CirculoEstadistico'
 import music from "../../assets/img/videos/musica_fondo.mp3";
