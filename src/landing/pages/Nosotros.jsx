@@ -45,6 +45,9 @@ const Nosotros = () => {
           src={nosotrosBarber}
           className="position-absolute top-0 start-0 w-100 h-100 img-fade"
           alt="nosotrosBarber"
+          decoding="async"
+          loading="eager"
+          fetchpriority="high"
         />
 
         {/* Capa oscura */}
