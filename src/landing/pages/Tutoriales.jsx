@@ -52,6 +52,9 @@ const Contactanos = () => {
           className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
           alt="barberTutorial"
           style={{ objectFit: 'cover' }}
+          decoding="async"
+          loading="eager"
+          fetchpriority="high"
         />
 
         {/* Capa oscura */}
