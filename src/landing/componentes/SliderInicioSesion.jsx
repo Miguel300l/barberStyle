@@ -66,12 +66,12 @@ const Slider = () => {
             <img
               src={img}
               className="carousel-image"
-              alt={`barbershop-${index}`}
+              alt={index === 0 ? "barbershop" : `barbershop-${index}`}
               width="1200"
               height="667"
               loading={index === 0 ? "eager" : "lazy"}
               fetchpriority={index === 0 ? "high" : "low"}
-              decoding="async"
+              decoding={index === 0 ? "sync" : "async"}
             />
 
             <div className="overlay-dark"></div>
