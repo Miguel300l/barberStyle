@@ -40,9 +40,6 @@ const Contenido = () => {
         src={precios}
         className="position-absolute top-0 start-0 w-100 h-100 img-precios-zoom"
         alt="precios"
-        decoding="async"
-        loading="eager"
-        fetchpriority="high"
       />
 
       {/* Capa oscura */}
