@@ -42,6 +42,9 @@ const Profesionales = () => {
           src={servicioBarberia}
           className="position-absolute top-0 start-0 w-100 h-100 img-servicios-zoom"
           alt="servicioBarberia"
+          decoding="async"
+          loading="eager"
+          fetchpriority="high"
         />
 
         {/* Capa oscura */}
