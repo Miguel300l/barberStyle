@@ -203,52 +203,7 @@ const Nosotros = () => {
 
 
           {/* Card 2 */}
-          <div className="col-12 col-sm-6 col-md-4 col-lg-3 my-3 d-flex flex-column align-items-center">
-            <div className="box-nosotros" style={{ width: '18rem', position: 'relative' }}>
-              <img
-                src={barbero2}
-                alt="barbero2"
-                className="card-img"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-              <a
-                href="https://wa.me/573234470181"
-                className="btn-agendar"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="contactar por whatsApp para solicitar una pagina web"
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  fontFamily: '"Bebas Neue", sans-serif',
-                  fontSize: '16px',
-                  padding: '6px 12px',
-                  color: 'white',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                  backgroundColor: '#C59D5F',
-                  borderRadius: '20px',
-                }}
-              >
-                Agendar Cita
-              </a>
-            </div>
-            <h3
-              className="card-title mt-2"
-              style={{
-                fontFamily: 'Bebas Neue',
-                fontSize: '28px',
-                textTransform: 'uppercase',
-                whiteSpace: 'nowrap',
-                marginBottom: '5px',
-              }}
-            >
-              Carlos
-            </h3>
-            <div style={{ fontFamily: 'Lato', fontSize: '16px' }}>Barbero.</div>
-          </div>
+
         </div>
       </div>
 

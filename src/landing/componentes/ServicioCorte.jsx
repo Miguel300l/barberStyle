@@ -63,7 +63,7 @@ const ServicesSection = () => (
 
         <div className="map-container">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.068607544737!2d-76.56854582527227!3d2.484243097494466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30041156f8329d%3A0xa235acbb8460fd11!2sCra.%2012%20%23%2068%20NORTE-11%2C%20Popay%C3%A1n%2C%20Cauca!5e0!3m2!1ses!2sco!4v1775265009000!5m2!1ses!2sco"
+                src="https://www.google.com/maps/embed?pb=!4v1792336693805!6m8!1m7!1sZaFmCQxn8NmMYezBs5Jigg!2m2!1d2.486657322117287!2d-76.56688408210842!3f84.97!4f7.189999999999998!5f0.7820865974627469"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}

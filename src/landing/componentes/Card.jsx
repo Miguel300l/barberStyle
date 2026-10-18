@@ -48,42 +48,7 @@ const CardGiro = () => {
 
 
         {/* Card 2 */}
-        <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-3">
 
-          <div className="flip-card">
-
-            <div className="flip-card-inner">
-
-              <div className="flip-card-front">
-                <img
-                  src={barbero2}
-                  alt="barbero2"
-                  className="card-img"
-                />
-              </div>
-
-              <div className="flip-card-back">
-
-                <div className="card-body text-center contenido-card">
-
-                  <h3 className="card-title nombre-barbero">
-                    Carlos
-                  </h3>
-
-                  <p className="descripcion-barbero">
-                    Especialista en cabello rizado, aplicando técnicas precisas
-                    para lograr cortes definidos y adaptados a cada estilo.
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
 
       </div>
     </div>
